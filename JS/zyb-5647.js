@@ -75,11 +75,29 @@ function mudaCor(){
     b = Math.round(Math.random()*255);
 
     const cabecalho = document.querySelector(".cabecalho");
+    const central = document.querySelector(".central")
 
-    cabecalho.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
+    // cabecalho.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
+    central.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
 
     tmp = setTimeout(mudaCor, 500);
 
 }
 
 mudaCor();
+
+
+//FUNÇÃO ALTERA BANNER
+
+function alteraBanner(){
+
+    let nr = Math.round(Math.random() *3);
+
+    let caminho = `./img/banner-lateral-${nr}.png`;
+
+    const img1 = document.querySelector(".l-e > img")
+    img1.src = caminho;
+
+}
+
+alteraBanner();
