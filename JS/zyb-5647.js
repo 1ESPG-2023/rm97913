@@ -138,6 +138,7 @@
 // }
 
 const inputUser = document.querySelector("input[name='nmUser']");
+const labeluser = document.querySelector("label[for]");
 
 inputUser.addEventListener("focus", ()=>{
     inputUser.setAttribute("style", "outline-color:#ff0000");
@@ -146,8 +147,10 @@ inputUser.addEventListener("focus", ()=>{
 inputUser.addEventListener("keyup", ()=>{
     if(inputUser.value.length < 8){
         inputUser.setAttribute("style", "outline-color:#ff0000");
+        labeluser.setAttribute("style", "color:#ff0000");
     }else{
         inputUser.setAttribute("style", "outline-color:#dddddd");
+        labeluser.setAttribute("style", "color:#00ff00");
     }
     
 });
