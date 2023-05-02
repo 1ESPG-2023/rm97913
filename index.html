@@ -16,29 +16,55 @@
 
     <header class="cabecalho">
         <span>CABEÇALHO</span>
-        <img src="./img/banner-1440x300-1.jpg" alt="" width="400px">
     </header>
 
     <div class="container">
         <aside class="l-e">
-            <span>B-E</span>
-            <img src="./img/banner-lateral-1.png" alt="" width="100px">
+            <img src="./img/banner-lateral-1.png" alt="Quadro" width="100px">
         </aside>
+
         <section class="central">
-            <span>CONTEÚDO</span>
+        
+            <div>
+                <img src="./img/pic_bulboff.gif" alt="Lampada" width="100px">
+            </div>
+
+            <!-- <button onclick="ligaDesliga()">LIGAR</button> -->
+            <button>LIGAR</button>
         </section>
+        
         <aside class="l-d">
-            <span>B-D</span>
-            <img src="./img/banner-lateral-2.png" alt="" width="100px">
+            <img src="./img/banner-lateral-2.png" alt="Quadro" width="100px">
         </aside>
     </div>
 
-    <footer class="rodape">
+
+    <div class="info">
+        <form action="index.html" method="get" onsubmit="return false">
+            <fieldset>
+                <legend>LOGIN</legend>
+                <div>
+                    <label for="idUser">Usuário</label>
+                    <input type="text" name="nmUser"  id="idUser" placeholder="Usuário">
+                </div>
+                <div>
+                    <label for="idPass">Senha</label>
+                    <input type="password" name="txtPass" id="idPass" placeholder="Senha">
+                </div>
+                <div>
+                    <button type="button">LOGIN</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+
+    <foooter class="rodape">
         <span>RODAPÉ</span>
-        <!-- <button value="10" onclick="console.log(`Resultado ${soma(this.value, 10, 5)}`)">CLICK</button> -->
+        <!-- <button value="10" onclick="console.log(`Resultado ${soma(this.value,10,5)}`)">CLICK</button> -->
         <button onclick="mudaCor()">START</button>
         <button onclick="clearTimeout(tmp)">STOP</button>
-    </footer>
+    </foooter>
 
 </body>
 </html>

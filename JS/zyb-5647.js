@@ -61,52 +61,93 @@
 
 // mudaCor();
 
-function mudaCor(){
+// function mudaCor(){
 
-    let r = "";
-    let g = "";
-    let b = "";
-    //random = gera numeros aleatórios entre 0 e 1
-    //ceil, floor e round que arredondam o número para cima, para baixo ou aleatoriamente
+//     let r = "";
+//     let g = "";
+//     let b = "";
+//     //random = gera numeros aleatórios entre 0 e 1
+//     //ceil, floor e round que arredondam o número para cima, para baixo ou aleatoriamente
 
-    //Determinando para a váriavel r um valor entre 0 e 255
-    r = Math.round(Math.random()*255);
-    g = Math.round(Math.random()*255);
-    b = Math.round(Math.random()*255);
+//     //Determinando para a váriavel r um valor entre 0 e 255
+//     r = Math.round(Math.random()*255);
+//     g = Math.round(Math.random()*255);
+//     b = Math.round(Math.random()*255);
 
-    const cabecalho = document.querySelector(".cabecalho");
-    const central = document.querySelector(".central")
+//     const cabecalho = document.querySelector(".cabecalho");
+//     const central = document.querySelector(".central")
 
-    // cabecalho.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
-    central.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
+//     // cabecalho.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
+//     central.setAttribute("style", `background-color:rgb(${r},${g},${b})`);
 
-    tmp = setTimeout(mudaCor, 500);
+//     tmp = setTimeout(mudaCor, 500);
 
-}
+// }
 
-mudaCor();
+// mudaCor();
 
 
 //FUNÇÃO ALTERA BANNER
 
-function alteraBanner(){
+// function alteraBanner(){
     
-    const img1 = document.querySelector(".l-e > img")
-    const img2 = document.querySelector(".l-d > img")
+//     const img1 = document.querySelector(".l-e > img")
+//     const img2 = document.querySelector(".l-d > img")
     
     
-    let nr = Math.ceil(Math.random() *3);
-    let caminho = `./img/banner-lateral-${nr}.png`;
-    img1.src = caminho;
+//     let nr = Math.ceil(Math.random() *3);
+//     let caminho = `./img/banner-lateral-${nr}.png`;
+//     img1.src = caminho;
     
 
-    nr = Math.ceil(Math.random() *3);
-    caminho = `./img/banner-lateral-${nr}.png`;
-    img2.src = caminho;
+//     nr = Math.ceil(Math.random() *3);
+//     caminho = `./img/banner-lateral-${nr}.png`;
+//     img2.src = caminho;
 
-    setTimeout(alteraBanner, 500);
+//     setTimeout(alteraBanner, 500);
 
 
-}
+// }
 
-alteraBanner();
+//alteraBanner();
+
+
+// const botao = document.querySelector(".central button");
+
+// botao.addEventListener("click", ()=>{
+
+    
+//     if(this.textContent == "LIGAR"){
+//         imgLampada.src = "./img/pic_bulbon.gif";
+//         botao.textContent = "DESLIGAR";
+//     }else{
+//         imgLampada.src = "./img/pic_bulboff.gif";
+//         botao.textContent = "LIGAR";
+//     }
+
+
+// });
+
+
+//function ligaDesliga(){
+
+//     const imgLampada = document.querySelector(".central img")
+//     const botao = document.querySelector(".central button")
+
+
+// }
+
+const inputUser = document.querySelector("input[name='nmUser']");
+
+inputUser.addEventListener("focus", ()=>{
+    inputUser.setAttribute("style", "outline-color:#ff0000");
+});
+
+inputUser.addEventListener("keyup", ()=>{
+    if(inputUser.value.length < 8){
+        inputUser.setAttribute("style", "outline-color:#ff0000");
+    }else{
+        inputUser.setAttribute("style", "outline-color:#dddddd");
+    }
+    
+});
